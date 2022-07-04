@@ -1,0 +1,17 @@
+{
+    "name": "Sesamo",
+    "short_name": "Sesamo",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "./",
+    "start_url": "./",
+    "icons": [
+        {
+            "src": "./logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
