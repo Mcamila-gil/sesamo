@@ -116,15 +116,15 @@ include("head.php");
                 //Comparacion de llave para eliminar datos
                 
                 if(isset($_GET['aksi']) == 'delete'){
-					$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-					$cek = mysqli_query($con, "SELECT * FROM productos WHERE idProducto='$nik'");
+					$nik = mysqli_real_escape_string($conn,(strip_tags($_GET["nik"],ENT_QUOTES)));
+					$cek = mysqli_query($conn, "SELECT * FROM productos WHERE idProducto='$nik'");
 					//Notificaciones y eliminar
                     if(mysqli_num_rows($cek) == 0){
                         echo '<div class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
                 
                     }else{
-                        $delete = mysqli_query($con, "DELETE FROM productos WHERE idProducto='$nik'");
-                        $delete = mysqli_query($con, "DELETE FROM productos WHERE idProducto='$nik'");
+                        $delete = mysqli_query($conn, "DELETE FROM productos WHERE idProducto='$nik'");
+                        $delete = mysqli_query($conn, "DELETE FROM productos WHERE idProducto='$nik'");
                     if($delete){
                         echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Datos eliminados correctamente.</div>';
                     
